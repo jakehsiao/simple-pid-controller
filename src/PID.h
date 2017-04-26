@@ -41,6 +41,9 @@ public:
   * Calculate the total PID error.
   */
   double TotalError();
+
+  // get steering angle
+  double GetSteer();
 };
 
 #endif /* PID_H */
