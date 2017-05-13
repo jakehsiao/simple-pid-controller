@@ -11,10 +11,10 @@ PID::PID() {}
 
 PID::~PID() {}
 
-void PID::Init(double Kp_, double Ki_, double Kd_) {
-  Kp = Kp_;
-  Ki = Ki_;
-  Kd = Kd_;
+void PID::Init(double Kp_, double Ki_, double Kd_, double fraction) {
+  Kp = Kp_ * fraction;
+  Ki = Ki_ * fraction;
+  Kd = Kd_ * fraction;
 
   p_error = -999.9; // init value
   i_error = 0;
